@@ -2,7 +2,7 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["bluetooth", "network", "pulseaudio", "battery", "clock"],
+  "modules-right": ["tray", "bluetooth", "network", "pulseaudio", "battery", "clock"],
   "clock": {
     "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
@@ -23,10 +23,10 @@
     "tooltip-format": "{time}"
   },
   "network": {
-    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
+    "format-wifi": "<span size='13000' foreground='#f5e0dc'> </span>",
+    "format-ethernet": "<span size='17000' foreground='#f5e0dc'>󰈁</span>",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
+    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>󰤭 </span>",
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
     "on-click": "kitty impala"    
   },
@@ -40,6 +40,9 @@
   },
   "bluetooth": {
       "on-click": "blueman-manager",
-      "format": " {status}",
+      "format": "<span size='16000'>󰂯</span>",
+      "format-on": "<span size='16000'>󰂯</span>",
+      "format-disabled": "<span size='16000'>󰂲</span>",
+      "format-off": "<span size='16000'>󰂲</span>"
   }
 }
